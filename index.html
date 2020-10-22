@@ -36,9 +36,25 @@
         event.target.playVideo();
       }
 
+
+
+
       function onPlayerStateChange(event) {
-         event.target.playVideo();
-      }
+        if (event.data == YT.PlayerState.PAUSED) {
+         setTimeout(function(){  document.getElementById('play').innerHTML = player.playVideo();  },1000);
+        }
+        
+        if (event.data == YT.PlayerState.BUFFERING) {
+         setTimeout(function(){ document.getElementById('play').innerHTML = player.playVideo(); },1000);
+        }
+        
+        if (event.data == YT.PlayerState.CUED) {
+         setTimeout(function(){  document.getElementById('play').innerHTML =player.playVideo(); },1000);
+        }
+        
+        if (event.data == YT.PlayerState.ENDED) {
+         setTimeout(function(){  document.getElementById('play').innerHTML = player.playVideo();  },1000);
+        }
   
      
     </script>
