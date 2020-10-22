@@ -1,0 +1,45 @@
+<!-- прив нищ)))) -->
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+<meta name="description" content="">
+<meta property="og:title" content="">
+<meta property="og:image" content="">
+</head>
+<body>
+
+<script>
+
+      var tag = document.createElement('script');
+
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+
+      var player;
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+          height: '700',
+          width: '700',
+          videoId: 'BoIkVS_hUhE',
+          events: {
+            'onReady': onPlayerReady,
+            'onStateChange': onPlayerStateChange
+          }
+        });
+      }
+
+      function onPlayerReady(event) {
+        event.target.playVideo();
+      }
+
+      function onPlayerStateChange(event) {
+		event.target.playVideo();
+      }
+    </script>
+
+
+
+</body>
