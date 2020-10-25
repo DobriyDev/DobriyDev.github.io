@@ -53,20 +53,14 @@
 
 
       function onPlayerStateChange(event) {
-        if (event.data == YT.PlayerState.PAUSED) {
-         setTimeout(function(){  document.getElementById('player').innerHTML = play()  },1000);
-        }
-        
-        if (event.data == YT.PlayerState.BUFFERING) {
-         setTimeout(function(){  document.getElementById('player').innerHTML = play()  },2000);
-        }
-        
-        if (event.data == YT.PlayerState.CUED) {
-         setTimeout(function(){  document.getElementById('player').innerHTML = play()  },1000);
-        }
-        
-        if (event.data == YT.PlayerState.ENDED) {
-         setTimeout(function(){  document.getElementById('player').innerHTML = play()  },1000);
+      if (event.data == YT.PlayerState.PAUSED) {
+         setTimeout(function(){  document.getElementById('play').innerHTML = play()  },1000);
+        elseif (event.data == YT.PlayerState.BUFFERING)
+         setTimeout(function(){  document.getElementById('play').innerHTML = play()  },2000);
+        elseif (event.data == YT.PlayerState.CUED)
+         setTimeout(function(){  document.getElementById('play').innerHTML = play()  },1000);
+        elseif (event.data == YT.PlayerState.ENDED)
+         setTimeout(function(){  document.getElementById('play').innerHTML = play()  },1000);
         }
         
         
