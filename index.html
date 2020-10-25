@@ -29,7 +29,7 @@
         player = new YT.Player('player', {
           height: '700',
           width: '700',
-          videoId: 'uVPoGMu3LQo',
+          videoId: 'BoIkVS_hUhE',
           events: {
             'onReady': onPlayerReady,
             'onStateChange': onPlayerStateChange
@@ -37,27 +37,32 @@
         });
       }
 
-
       // 4. The API will call this function when the video player is ready.
       function onPlayerReady(event) {
-        //event.target.playVideo();
-                setTimeout(function(){  document.getElementById('play').innerHTML =  player.playVideo();  },2000);
+                setTimeout(function(){   event.target.playVideo();  },1000);
       }
 
-      function onPlayerStateChange(event) {
-      if (event.data == YT.PlayerState.PAUSED) {
-         setTimeout(function(){  document.getElementById('play').innerHTML =  player.playVideo()  },1000);
-        elseif (event.data == YT.PlayerState.BUFFERING)
-         setTimeout(function(){  document.getElementById('play').innerHTML =  player.playVideo()  },2000);
-        elseif (event.data == YT.PlayerState.CUED)
-         setTimeout(function(){  document.getElementById('play').innerHTML =  player.playVideo()  },1000);
-        elseif (event.data == YT.PlayerState.ENDED)
-         setTimeout(function(){  document.getElementById('play').innerHTML =  player.playVideo()  },1000);
-        }
-        
-        
+      function play(){
+        player.playVideo();
       }
-    </script>	
+      
+      function pause(){
+        player.pauseVideo();
+      }
+
+
+      function onPlayerStateChange(event) {
+		if (event.data == YT.PlayerState.PAUSED) {
+         setTimeout(function(){  document.getElementById('play').innerHTML = play()  },1000);
+        elseif (event.data == YT.PlayerState.BUFFERING)
+         setTimeout(function(){  document.getElementById('play').innerHTML = play()  },2000);
+        elseif (event.data == YT.PlayerState.CUED)
+         setTimeout(function(){  document.getElementById('play').innerHTML = play()  },1000);
+        elseif (event.data == YT.PlayerState.ENDED)
+         setTimeout(function(){  document.getElementById('play').innerHTML = play()  },1000);
+        }
+      }
+    </script>
 	
 	
 </body>
