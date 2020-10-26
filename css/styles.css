@@ -1,20 +1,37 @@
 .infobutton {
-	box-shadow:inset 0px 4px 0px 0px #000000;
-	background-color:transparent;
-	border:1px solid #787878;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:13px;
-	font-weight:bold;
-	padding:6px 12px;
-	text-decoration:none;
+    box-shadow:inset 0px 4px 0px 0px #000000;
+    background-color:transparent;
+    border:1px solid #787878;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:13px;
+    font-weight:bold;
+    padding:6px 12px;
+    text-decoration:none;
 }
 .infobutton:hover {
-	background-color:transparent;
+    box-shadow:inset 0px 4px 0px 0px #ffffff;
+    background-color:#000000;
+    color:#751717;
+    border:1px solid #ffffff;
 }
 .infobutton:active {
-	position:relative;
-	top:1px;
+    position:relative;
+    top:1px;
+}
+
+.eblan {
+  border:1px solid #ffffff;
+  width: 30%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 25px;
+}
+
+div.info {
+  width: 80%;
+  background-color: #333232;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
 }
