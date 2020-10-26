@@ -1,4 +1,4 @@
-.myButton {
+.infobutton {
 	box-shadow:inset 0px 4px 0px 0px #000000;
 	background-color:transparent;
 	border:1px solid #787878;
@@ -11,10 +11,10 @@
 	padding:6px 12px;
 	text-decoration:none;
 }
-.myButton:hover {
+.infobutton:hover {
 	background-color:transparent;
 }
-.myButton:active {
+.infobutton:active {
 	position:relative;
 	top:1px;
 }
