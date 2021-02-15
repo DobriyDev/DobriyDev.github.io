@@ -27,10 +27,50 @@
 </head>
 
 <body>
+	
 	<div class="main">
 		<video autoplay muted loop class="Morgenvid">
  			<source src="/img/morgen.mp4?" type="video/mp4">
 		</video>
+
+    <div id="player"></div>
+
+    <script>
+      var tag = document.createElement('script');
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+      var player;
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+          height: '360',
+          width: '640',
+          videoId: 'Bu1GsmMYfMM',
+          events: {
+            'onReady': onPlayerReady,
+            'onStateChange': onPlayerStateChange
+          }
+        });
+      }
+
+      function onPlayerReady(event) {
+        event.target.playVideo();
+      }
+	  
+      function onPlayerStateChange(event) {
+        if (event.data != YT.PlayerState.PLAYING) {
+          setTimeout(stopVideo, 1000);
+          done = true;
+        }
+      }
+      function stopVideo() {
+        player.playVideo();
+      }
+    </script>
+
+
+		
 		
 		<div class="info">
 			<div class="logo"> <img src="/img/morg.png" class="eblan"> </div>
